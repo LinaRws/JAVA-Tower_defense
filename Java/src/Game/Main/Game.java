@@ -15,7 +15,13 @@ public class Game extends JFrame {
     Arrays.asList(
       Arrays.asList(
         new SimpleEntry<Integer, Integer>(1, 7),
-        new SimpleEntry<Integer, Integer>(28, 7)
+        new SimpleEntry<Integer, Integer>(1, 8),
+        new SimpleEntry<Integer, Integer>(10, 8),
+        new SimpleEntry<Integer, Integer>(10, 4),
+        new SimpleEntry<Integer, Integer>(17, 4),
+        new SimpleEntry<Integer, Integer>(17, 6),
+        new SimpleEntry<Integer, Integer>(23, 6),
+        new SimpleEntry<Integer, Integer>(23, 9)
       )
     )
   );
