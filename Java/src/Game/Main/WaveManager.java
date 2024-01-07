@@ -44,7 +44,7 @@ public void init() {
 
     this.waves = new ArrayList<List<Enemy>>();
 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 9; i++) {
         List<Enemy> wave = new ArrayList<>();
         int numberOfEnemiesInWave = 3;
 
@@ -66,7 +66,7 @@ public void init() {
     boolean isGameOver = false;
 
     if (currentWaveIndex == 0 && enemySpawned == 0) {
-      if (System.currentTimeMillis() - waveStartTime >= 7000) {
+      if (System.currentTimeMillis() - waveStartTime >= 2000) {
         waveStartTime = System.currentTimeMillis();
       } else {
         return false;
@@ -108,7 +108,7 @@ public void init() {
     long currentTime = System.currentTimeMillis();
     if (currentTime - lastSpawnTime >= spawnInterval) {
       if (currentWaveIndex == 10) {
-        upgradeEnemies();
+        // upgradeEnemies();
         currentWaveIndex = 0;
       }
       Enemy enemy = waves.get(currentWaveIndex).get(enemySpawned);
@@ -118,14 +118,14 @@ public void init() {
     }
   }
 
-  private void upgradeEnemies() {
-    for (List<Enemy> wave : waves) {
-      for (Enemy enemy : wave) {
-        enemy.upgradeEnemy();
-        enemy.reset(getRandomRoute());
-      }
-    }
-  }
+  // private void upgradeEnemies() {
+  //   for (List<Enemy> wave : waves) {
+  //     for (Enemy enemy : wave) {
+  //       enemy.upgradeEnemy();
+  //       enemy.reset(getRandomRoute());
+  //     }
+  //   }
+  // }
 
   public List<Enemy> getCurrentWave() {
     return currentWave;

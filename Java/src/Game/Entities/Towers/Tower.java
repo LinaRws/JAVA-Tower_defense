@@ -8,9 +8,7 @@ import java.awt.Image;
 public abstract class Tower extends AUnit {
 
   public enum Type {
-    RANGE,
-    MELEE,
-    AIR,
+    EIFFEL, PISE,
   }
 
   protected int damage;

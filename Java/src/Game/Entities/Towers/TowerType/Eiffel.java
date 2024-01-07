@@ -14,7 +14,7 @@ public class Eiffel extends Tower {
   }
 
   public Eiffel(double x, double y) {
-    super(2, 3, 5, false, 5, sprite, x, y, Type.RANGE);
+    super(2, 3, 5, false, 5, sprite, x, y, Type.EIFFEL);
   }
 
   public static Image getImage() {

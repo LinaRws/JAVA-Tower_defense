@@ -41,7 +41,7 @@ public class GamePanel extends JPanel implements Runnable {
     this.waveManager = waveManager;
     this.towerManager = towerManager;
 
-    setBackground(Color.DARK_GRAY);
+    setBackground(Color.BLACK);
     setPreferredSize(new Dimension(1500, 800));
 
     gameThread = new Thread(this);
@@ -49,24 +49,24 @@ public class GamePanel extends JPanel implements Runnable {
 
     addMouseListener(towerPlacement);
 
-    hpLabel = new JLabel("HP : " + Player.getLife());
+    hpLabel = new JLabel("Vie Château : " + Player.getLife());
     hpLabel.setFont(new Font("Arial", Font.BOLD, 40));
-    hpLabel.setForeground(Color.GREEN);
+    hpLabel.setForeground(Color.ORANGE);
     hpLabel.setAlignmentX(CENTER_ALIGNMENT);
 
-    goldLabel = new JLabel("Gold : " + Player.getGold());
+    goldLabel = new JLabel("Recharge : " + Player.getGold());
     goldLabel.setFont(new Font("Arial", Font.BOLD, 40));
-    goldLabel.setForeground(Color.YELLOW);
+    goldLabel.setForeground(Color.ORANGE);
     goldLabel.setAlignmentX(CENTER_ALIGNMENT);
 
-    scoreLabel = new JLabel("Your score : " + Player.getScore());
+    scoreLabel = new JLabel("Score : " + Player.getScore());
     scoreLabel.setFont(new Font("Arial", Font.BOLD, 40));
-    scoreLabel.setForeground(Color.RED);
+    scoreLabel.setForeground(Color.ORANGE);
     scoreLabel.setAlignmentX(CENTER_ALIGNMENT);
 
     waveLabel = new JLabel("Wave : " + WaveManager.getWaveIndex());
     waveLabel.setFont(new Font("Arial", Font.BOLD, 40));
-    waveLabel.setForeground(Color.BLUE);
+    waveLabel.setForeground(Color.ORANGE);
     waveLabel.setAlignmentX(CENTER_ALIGNMENT);
 
     add(hpLabel);
@@ -98,9 +98,9 @@ public class GamePanel extends JPanel implements Runnable {
 
   private Tower createTower(Tower.Type type, double x, double y) {
     switch (type) {
-      case RANGE:
+      case EIFFEL:
         return new Eiffel(x, y);
-      case MELEE:
+      case PISE:
         return new Pise(x, y);
       default:
         return null;

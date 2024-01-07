@@ -20,13 +20,13 @@ public class BottomTowersPanel extends JPanel {
     setLayout(new FlowLayout());
 
     ImageIcon basicImage = new ImageIcon(Eiffel.getImage());
-    JButton range = new JButton(basicImage);
-    range.addActionListener(e -> selectedType = Tower.Type.RANGE);
+    JButton eiffel = new JButton(basicImage);
+    eiffel.addActionListener(e -> selectedType = Tower.Type.EIFFEL);
     ImageIcon canonImage = new ImageIcon(Pise.getImage());
-    JButton melee = new JButton(canonImage);
-    melee.addActionListener(e -> selectedType = Tower.Type.MELEE);
+    JButton pise = new JButton(canonImage);
+    pise.addActionListener(e -> selectedType = Tower.Type.PISE);
 
-    add(range);
-    add(melee);
+    add(eiffel);
+    add(pise);
   }
 }

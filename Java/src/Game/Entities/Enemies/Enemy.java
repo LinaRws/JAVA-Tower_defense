@@ -85,10 +85,10 @@ public abstract class Enemy extends AUnit implements IMovable {
     this.speed = maxSpeed;
   }
 
-  public void upgradeEnemy() {
-    this.maxLife *= 2;
-    this.maxSpeed *= 2;
-  }
+  // public void upgradeEnemy() {
+  //   this.maxLife *= 2;
+  //   this.maxSpeed *= 2;
+  // }
 
   public void rewardPlayer() {
     Player.addGold(getIncome());

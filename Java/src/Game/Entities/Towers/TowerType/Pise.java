@@ -14,7 +14,7 @@ public class Pise extends Tower {
   }
 
   public Pise(double x, double y) {
-    super(4, 2, 2, false, 10, sprite, x, y, Type.MELEE);
+    super(4, 2, 2, false, 10, sprite, x, y, Type.PISE);
   }
 
   public static Image getImage() {
